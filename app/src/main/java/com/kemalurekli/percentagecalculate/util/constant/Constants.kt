@@ -1,4 +1,4 @@
-package com.kemalurekli.percentagecalculate.constant
+package com.kemalurekli.percentagecalculate.util.constant
 
 var userInputValue : Double = 0.0
 var userPercentageValue : Double = 0.0

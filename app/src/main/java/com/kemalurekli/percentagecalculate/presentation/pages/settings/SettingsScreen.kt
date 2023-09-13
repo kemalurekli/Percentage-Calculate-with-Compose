@@ -33,7 +33,6 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.kemalurekli.percentagecalculate.R
@@ -89,7 +88,6 @@ fun DarkModeOption(dataStoreUtil: DataStoreUtil, systemTheme: Boolean) {
 
         Text(
             text = stringResource(R.string.dark_mode),
-            fontSize = 20.sp,
             fontFamily = FontFamily.Default,
             modifier = Modifier.padding(start = 10.dp)
         )
@@ -133,18 +131,18 @@ fun TermsAndConditionsLink() {
             .defaultMinSize(minHeight = 80.dp)
             .padding(10.dp)
             .border(
+
                 width = 1.dp,
                 shape = RoundedCornerShape(10.dp),
                 color = MaterialTheme.colorScheme.primary
             )
             .clickable {
-                uriHandler.openUri("https://www.mobronic.com")
+                uriHandler.openUri("https://gist.github.com/kemalurekli/f9bbc2bc4f7bda7aeb5db37ac9a13055")
             }
     ) {
 
         Text(
             text = stringResource(R.string.terms_and_conditions),
-            fontSize = 20.sp,
             fontFamily = FontFamily.Default,
             modifier = Modifier.padding(start = 10.dp)
         )

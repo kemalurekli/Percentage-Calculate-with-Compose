@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.kemalurekli.percentagecalculate.constant.MAX_NUM_LENGTH
+import com.kemalurekli.percentagecalculate.util.constant.MAX_NUM_LENGTH
 import com.kemalurekli.percentagecalculate.presentation.pages.home.CalculatorAction
 import com.kemalurekli.percentagecalculate.presentation.pages.home.HomeScreenViewModel
 import com.kemalurekli.percentagecalculate.presentation.pages.home.util.CustomButton

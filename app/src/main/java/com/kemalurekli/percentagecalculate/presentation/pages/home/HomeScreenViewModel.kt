@@ -4,7 +4,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.kemalurekli.percentagecalculate.constant.MAX_NUM_LENGTH
+import com.kemalurekli.percentagecalculate.util.constant.MAX_NUM_LENGTH
 import java.math.RoundingMode
 import java.text.DecimalFormat
 

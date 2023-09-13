@@ -2,4 +2,15 @@
 <resources>
 
     <style name="Theme.PercentageCalculate" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PercentageCalculate.Starting" parent="Theme.SplashScreen">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="windowSplashScreenBackground">@color/splash_color</item>
+
+
+        <!-- Set the theme of the Activity that directly follows your splash screen. -->
+        <!-- Required -->
+        <item name="postSplashScreenTheme">@style/Theme.PercentageCalculate</item>
+    </style>
+
 </resources>
