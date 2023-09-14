@@ -24,7 +24,7 @@ import com.kemalurekli.percentagecalculate.presentation.pages.home.HomeScreenVie
 
 @Composable
 fun ResultArea(
-    backgroundcolor : Color
+    backgroundcolor: Color
 ) {
     val viewModel = viewModel { HomeScreenViewModel() }
     val state = viewModel.state
@@ -32,7 +32,11 @@ fun ResultArea(
         modifier = Modifier
             .fillMaxWidth()
             .padding(4.dp)
-            .border(width = 4.dp, shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.secondary),
+            .border(
+                width = 4.dp,
+                shape = RoundedCornerShape(10.dp),
+                color = MaterialTheme.colorScheme.secondary
+            ),
         verticalAlignment = Alignment.CenterVertically,
 
         ) {
@@ -40,17 +44,30 @@ fun ResultArea(
             painter = painterResource(id = R.drawable.baseline_check_24),
             contentDescription = "Your Value Icon Image",
             modifier = Modifier
-                .padding(10.dp).size(26.dp),
+                .padding(10.dp)
+                .size(26.dp),
             tint = MaterialTheme.colorScheme.onSurface
         )
-        Text(
-            text = state.lastResult.replace(".", ","),
-            modifier = Modifier
-                .fillMaxWidth().height(100.dp)
-                .padding(start = 32.dp),
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.onSurface,
-            fontSize = 40.sp
-        )
+        if (state.lastResult.length >= 12) {
+            ResultText(v = state.lastResult, fontSize = 30)
+        } else {
+            ResultText(v = state.lastResult, fontSize = 40)
+        }
     }
+
+
+}
+
+@Composable
+fun ResultText(v: String, fontSize: Int) {
+    Text(
+        text = v.replace(".", ","),
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(50.dp)
+            .padding(start = 32.dp),
+        fontWeight = FontWeight.Bold,
+        color = MaterialTheme.colorScheme.onSurface,
+        fontSize = fontSize.sp
+    )
 }

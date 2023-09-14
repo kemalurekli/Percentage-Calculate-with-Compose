@@ -46,12 +46,22 @@ fun AppBar(
                 painter = painterResource(id = R.drawable.top_bar_logo),
                 contentDescription = "Menu"
             )
+            IconButton(onClick = {
+                if (Screen.HomeScreen.route != navBackStackEntry?.destination?.route) {
+                    navController.navigate(Screen.HomeScreen.route){
+                        //This is for back button using. User can not return other page!
+                        popUpTo(0)
+                    }
+                }
+            }) {
+
+            }
         },
         colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = MaterialTheme.colorScheme.onPrimary),
         actions = {
             IconButton(onClick = {
                 //If Screen is Settings, it'll be disable.
-                if(Screen.SettingScreen.route != navBackStackEntry?.destination?.route){
+                if (Screen.SettingScreen.route != navBackStackEntry?.destination?.route) {
                     navController.navigate(Screen.SettingScreen.route)
                 }
 

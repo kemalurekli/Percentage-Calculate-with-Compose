@@ -65,7 +65,8 @@ fun UserInputPercentageArea(
             painter = painterResource(id = R.drawable.percentage_user_icon),
             contentDescription = "Percentage Icon Image",
             modifier = Modifier
-                .padding(10.dp).size(26.dp),
+                .padding(10.dp)
+                .size(26.dp),
             tint = MaterialTheme.colorScheme.onSurface
         )
         Text(
