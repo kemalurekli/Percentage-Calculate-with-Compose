@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
         //Initialize the datastore.
         dataStoreUtil = DataStoreUtil(applicationContext)
         super.onCreate(savedInstanceState)
+
         //Get the default system mode.
         val systemTheme =
             when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
@@ -36,6 +37,7 @@ class MainActivity : ComponentActivity() {
                 Configuration.UI_MODE_NIGHT_NO -> false
                 else -> false
             }
+
 
         setContent {
             //Get the user preference for mode.

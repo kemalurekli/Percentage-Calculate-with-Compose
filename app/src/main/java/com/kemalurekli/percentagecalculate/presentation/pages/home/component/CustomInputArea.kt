@@ -25,8 +25,8 @@ import com.kemalurekli.percentagecalculate.presentation.theme.SelectedYellow
 @Composable
 fun CustomInputArea() {
     val viewModel = viewModel { HomeScreenViewModel() }
-    val buttonSpacing = 8.dp
-    val rowSpacing = 4.dp
+    val buttonSpacing = 8
+    val rowSpacing = 4
 
 
         Column(
@@ -42,8 +42,8 @@ fun CustomInputArea() {
             Row(
                 modifier = Modifier
                     .fillMaxWidth(1f)
-                    .padding(rowSpacing),
-                horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
+                    .padding(rowSpacing.dp),
+                horizontalArrangement = Arrangement.spacedBy(buttonSpacing.dp)
             ) {
                 CustomButton(
                     symbol = "7", color = DarkBlue90, modifier = Modifier
@@ -77,8 +77,8 @@ fun CustomInputArea() {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(rowSpacing),
-                horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
+                    .padding(rowSpacing.dp),
+                horizontalArrangement = Arrangement.spacedBy(buttonSpacing.dp)
             ) {
                 CustomButton(
                     symbol = "4", color = DarkBlue90, modifier = Modifier
@@ -114,8 +114,8 @@ fun CustomInputArea() {
                 Row(modifier = Modifier.fillMaxWidth(0.75f)) {
                     Column(modifier = Modifier.fillMaxWidth()) {
                         Row(
-                            modifier = Modifier.padding(rowSpacing),
-                            horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
+                            modifier = Modifier.padding(rowSpacing.dp),
+                            horizontalArrangement = Arrangement.spacedBy(buttonSpacing.dp)
                         ) {
                             CustomButton(
                                 symbol = "1",
@@ -146,8 +146,8 @@ fun CustomInputArea() {
                             }
                         }
                         Row(
-                            modifier = Modifier.padding(rowSpacing),
-                            horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
+                            modifier = Modifier.padding(rowSpacing.dp),
+                            horizontalArrangement = Arrangement.spacedBy(buttonSpacing.dp)
                         ) {
                             CustomButton(
                                 symbol = "0",
@@ -173,7 +173,7 @@ fun CustomInputArea() {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(start = rowSpacing, top = rowSpacing, end = rowSpacing)
+                        .padding(start = rowSpacing.dp, top = rowSpacing.dp, end = rowSpacing.dp)
                 ) {
                     CustomButton(
                         symbol = "=", color = SelectedYellow, modifier = Modifier
@@ -186,3 +186,4 @@ fun CustomInputArea() {
             }
         }
 }
+

@@ -26,6 +26,7 @@ import com.kemalurekli.percentagecalculate.presentation.pages.home.util.AdmobBan
 import com.kemalurekli.percentagecalculate.presentation.pages.util.AppBar
 import com.kemalurekli.percentagecalculate.presentation.theme.PercentageCalculateTheme
 import com.kemalurekli.percentagecalculate.util.constant.MAX_NUM_LENGTH
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 
 @SuppressLint("CoroutineCreationDuringComposition")

@@ -2,7 +2,11 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     kotlin("kapt")
-    id ("dagger.hilt.android.plugin") }
+    id ("dagger.hilt.android.plugin")
+    id ("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+
+}
 
 android {
     namespace = "com.kemalurekli.percentagecalculate"
@@ -12,7 +16,7 @@ android {
         applicationId = "com.kemalurekli.percentagecalculate"
         minSdk = 26
         targetSdk = 33
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -60,7 +64,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-    testİmplementation("junit:junit:4.13.2")
+    testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.03.00"))
@@ -78,7 +82,7 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.6.0")
 
     //This is for advertisement
-    implementation ("com.google.android.gms:play-services-ads:22.3.0")
+    implementation ("com.google.android.gms:play-services-ads:22.4.0")
 
     //for the dark mode choosen
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
@@ -100,7 +104,13 @@ dependencies {
     //Default Splash Screen
     implementation("androidx.core:core-splashscreen:1.0.1")
 
+    //Google Crashlytics and analytics
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
+    //Purchase in app
+    implementation("com.android.billingclient:billing-ktx:6.0.1")
 
 
 
